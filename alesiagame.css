@@ -1,0 +1,109 @@
+body {
+  --block-color: #356c59;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top left, #F0FEB8 0%, #d5ffc4 100%);
+}
+
+.field {
+  margin-bottom: 3rem;
+  border: 2px solid var(--block-color);
+  border-radius: 8%;
+  background: linear-gradient(to bottom right, #F0FEB8 0%, #D5FFC4 100%);
+  box-shadow: 1vmin 1vmin 2vmin 1vmin rgba(0, 0, 0, 0.5);
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 9vmin;
+  height: 9vmin;
+  margin: 2vmin;
+  padding: 0 0.3rem 0.1rem 0;
+  border: 0.2vmin solid #0e1815;
+  border-radius: 35%;
+  box-shadow: 1vmin 1vmin 2vmin 0.2vmin rgba(0, 0, 0, 0.5), inset -3px -3px 5px 1px #0e1815;
+  color: var(--block-color);
+  font-size: 5vmin;
+  background-color: var(--block-color);
+  user-select: none;
+  cursor: pointer;
+  transition: transform .3s cubic-bezier(.1, 10, .6, -5), background-color .3s, color .3s;
+}
+
+.block:hover {
+  transform: scale(1.02);
+}
+
+.block.opened {
+  color: var(--block-color);
+  background-color: #f0feb8;
+  box-shadow: inset -3px -3px 5px 1px var(--block-color);
+  cursor: default;
+}
+
+.block.error {
+  color: #f0feb8;
+  background-color: #ce3700;
+}
+
+.salut {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  background-image: url(img/salute.gif);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 2vmin;
+  display: flex;
+  justify-content: center;
+  padding-top: 3vmin;
+  width: 100%;
+}
+
+select {
+  width: 8vmin;
+  min-width: 3rem;
+  margin-right: 1%;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  box-shadow: 1vmin 1vmin 2vmin 0.2vmin rgba(0, 0, 0, 0.5);
+}
+
+.controls button{
+  padding: 0 2rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: var(--block-color);
+  color: #f0feb8;
+  box-shadow: 1vmin 1vmin 2vmin 0.2vmin rgba(0, 0, 0, 0.5), inset -2px -2px 5px 1px #0e1815;
+  text-transform: uppercase;
+  font-size: 3vmin;
+}

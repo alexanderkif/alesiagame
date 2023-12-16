@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json" />
+  <title>Alesia Game</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="alesiagame.css">
+</head>
+<body>
+  <div class="background">
+    <div class="field"></div>
+  </div>
+  <div class="salut hidden"></div>
+  <div class="controls">
+    <select class="select-rows" name="rows" id="rows">
+      <option value="2">2</option>
+      <option value="4">4</option>
+      <option value="6">6</option>
+    </select>
+    <select class="select-columns" name="columns" id="columns">
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+    <button onclick="game.initGame()">New game</button>
+  </div>
+  <script src="alesiagame.js"></script>
+</body>
+</html>
